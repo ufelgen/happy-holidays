@@ -12,7 +12,14 @@ export default function Form() {
   //     navigate("/christmasCard");
   //   }
 
-  function getImage() {}
+  function getRandomNumber() {
+    // adjust number according to number of images in collection
+    return Math.floor(Math.random() * 223);
+  }
+
+  const url =
+    "https://source.unsplash.com/collection/1143269/" + getRandomNumber();
+  // adjust collection number
 
   function handleSubmitLanguage(event) {
     event.preventDefault();
@@ -29,14 +36,32 @@ export default function Form() {
   return (
     <>
       {card ? (
-        language === english ? (
+        language === "english" ? (
           <>
             <h1>Dear {name}</h1>
+            <StyledImageContainer>
+              <Image
+                src={url}
+                alt="cute animal"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />{" "}
+            </StyledImageContainer>
             <button onClick={() => setCard(false)}>start over</button>
           </>
         ) : (
           <>
             <h1>Hallo {name}</h1>
+            <StyledImageContainer>
+              <Image
+                src={url}
+                alt="cute animal"
+                layout="fill"
+                objectFit="cover"
+                priority
+              />{" "}
+            </StyledImageContainer>
             <button onClick={() => setCard(false)}>start over</button>
           </>
         )
@@ -74,4 +99,11 @@ const StyledForm = styled.form`
   option {
     margin: 10px;
   }
+`;
+
+const StyledImageContainer = styled.div`
+  width: 300px;
+  height: 300px;
+  border-color: black;
+  position: relative;
 `;
