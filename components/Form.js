@@ -37,7 +37,7 @@ export default function Form() {
     <>
       {card ? (
         language === "english" ? (
-          <>
+          <StyledCard>
             <h1>Dear {name}</h1>
             <StyledImageContainer>
               <Image
@@ -49,9 +49,9 @@ export default function Form() {
               />{" "}
             </StyledImageContainer>
             <button onClick={() => setCard(false)}>start over</button>
-          </>
+          </StyledCard>
         ) : (
-          <>
+          <StyledCard>
             <h1>Hallo {name}</h1>
             <StyledImageContainer>
               <Image
@@ -63,7 +63,7 @@ export default function Form() {
               />{" "}
             </StyledImageContainer>
             <button onClick={() => setCard(false)}>start over</button>
-          </>
+          </StyledCard>
         )
       ) : (
         <StyledForm onSubmit={handleSubmitLanguage}>
@@ -93,11 +93,26 @@ const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   margin: 10px;
+  justify-content: space-around;
+  align-items: center;
+  height: 80vh;
 
   label,
   select,
   option {
     margin: 10px;
+    font-size: 1.5rem;
+    color: black;
+    padding: 5px;
+  }
+
+  button {
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border: 1px solid darkblue;
+    border-radius: 5px;
+    font-size: 2rem;
   }
 `;
 
@@ -106,4 +121,12 @@ const StyledImageContainer = styled.div`
   height: 300px;
   border-color: black;
   position: relative;
+`;
+
+const StyledCard = styled.main`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80vh;
 `;
