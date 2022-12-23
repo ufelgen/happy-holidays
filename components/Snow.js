@@ -103,6 +103,7 @@ export default function LetItSnow() {
       <Snow />
       <Snow />
       <Snow />
+      {/* <Snow />
       <Snow />
       <Snow />
       <Snow />
@@ -201,8 +202,7 @@ export default function LetItSnow() {
       <Snow />
       <Snow />
       <Snow />
-      <Snow />
-      <Snow />
+      <Snow /> */}
     </>
   );
 }
@@ -1515,7 +1515,7 @@ const Snow = styled.div`
       transform: translate(1.40515vw, 100vh) scale(0.6985);
     }
   }
-  &:nth-child(101) {
+  /* &:nth-child(101) {
     opacity: 0.2655;
     transform: translate(9.9107vw, -10px) scale(0.2117);
     animation: fall-101 15s -2s linear infinite;
@@ -2814,5 +2814,5 @@ const Snow = styled.div`
     to {
       transform: translate(78.2217vw, 100vh) scale(0.2784);
     }
-  }
+  } */
 `;
