@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import Greetings from "./Greetings";
 import Form from "./Form";
 import { useState } from "react";

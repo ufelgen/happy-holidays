@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import Image from "next/image";
-import LetItSnow from "./Snow";
 import NewYear from "./NewYear";
 import Christmas from "./Christmas";
 import { useState } from "react";
@@ -23,7 +21,6 @@ export default function Greetings({ language, name, onToggleChristmasCard }) {
     "https://source.unsplash.com/collection/78709328/" + getRandomNumber(86);
   return (
     <>
-      <LetItSnow />
       <StyledCard>
         {newYear ? (
           <NewYear

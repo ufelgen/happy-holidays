@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import LetItSnow from "./Snow";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
 export default function Form({ onToggleChristmasCard, onGetFormData }) {
@@ -16,7 +15,6 @@ export default function Form({ onToggleChristmasCard, onGetFormData }) {
 
   return (
     <>
-      <LetItSnow />
       <StyledForm onSubmit={handleSubmitLanguage}>
         <StyledLabel>
           <label htmlFor="language">

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Site from "../components/Site";
 import Head from "next/head";
+import LetItSnow from "../components/Snow";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <title>happy holidays from Ulli</title>
       </Head>
       <StyledMain>
+        <LetItSnow />
         <Site />
       </StyledMain>
     </>
@@ -33,4 +35,6 @@ const StyledMain = styled.main`
     hsla(220, 78%, 29%, 1) 100%
   );
   height: 100vh;
+  width: 100%;
+  margin: 0;
 `;
