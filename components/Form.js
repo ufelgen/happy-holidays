@@ -4,10 +4,6 @@ import LetItSnow from "./Snow";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
 export default function Form({ onToggleChristmasCard, onGetFormData }) {
-  //   function navigateToChristmasCard() {
-  //     navigate("/christmasCard");
-  //   }
-
   function handleSubmitLanguage(event) {
     event.preventDefault();
     const language = event.target.elements.language.value;
@@ -73,8 +69,8 @@ const StyledForm = styled.form`
   input,
   select,
   option {
-    background-color: darkgreen;
-    color: red;
+    background-color: black;
+    color: hsla(221, 100%, 86%, 1);
   }
 
   button {
@@ -88,7 +84,5 @@ const StyledForm = styled.form`
 `;
 
 const StyledLabel = styled.div`
-  //background-color: rgba(0, 0, 0, 0, 1);
   background: hsla(221, 100%, 86%, 1);
-  //background-color: white;
 `;

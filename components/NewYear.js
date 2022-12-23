@@ -8,7 +8,7 @@ export default function NewYear({ language, url, onToggleChristmasCard }) {
       {" "}
       {language === "english" ? (
         <>
-          <StyledWishes>and a very happy and healty new year!</StyledWishes>
+          <StyledWishes>and a happy and healthy new year!</StyledWishes>
           <StyledImageContainer>
             <Image
               src={url}
@@ -18,7 +18,7 @@ export default function NewYear({ language, url, onToggleChristmasCard }) {
               priority
             />{" "}
           </StyledImageContainer>
-          <Signature />
+          <Signature language={language} />
           <StyledButton onClick={onToggleChristmasCard}>
             start over
           </StyledButton>
@@ -36,7 +36,7 @@ export default function NewYear({ language, url, onToggleChristmasCard }) {
             />{" "}
           </StyledImageContainer>
 
-          <Signature />
+          <Signature language={language} />
           <StyledButton onClick={onToggleChristmasCard}>von vorne</StyledButton>
         </>
       )}

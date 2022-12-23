@@ -1,11 +1,9 @@
 import styled from "styled-components";
-import LetItSnow from "./Snow";
 import Image from "next/image";
 
 export default function Christmas({ language, name, url, onProceedToNewYear }) {
   return (
     <>
-      <LetItSnow />
       {language === "english" ? (
         <>
           <StyledWishes>Dear {name}</StyledWishes>

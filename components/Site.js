@@ -8,7 +8,7 @@ export default function Site() {
   const [language, setLanguage] = useState("");
   const [name, setName] = useState("");
 
-  function toggleShowChristmasCard() {
+  function toggleChristmasCard() {
     setCard(!card);
   }
 
@@ -23,11 +23,11 @@ export default function Site() {
         <Greetings
           name={name}
           language={language}
-          onToggleChristmasCard={toggleShowChristmasCard}
+          onToggleChristmasCard={toggleChristmasCard}
         />
       ) : (
         <Form
-          onToggleChristmasCard={toggleShowChristmasCard}
+          onToggleChristmasCard={toggleChristmasCard}
           onGetFormData={getFormData}
         />
       )}

@@ -26,24 +26,19 @@ export default function Greetings({ language, name, onToggleChristmasCard }) {
       <LetItSnow />
       <StyledCard>
         {newYear ? (
-          <>
-            <NewYear
-              language={language}
-              name={name}
-              url={newYearUrl}
-              onStartOver={onToggleChristmasCard}
-            />
-          </>
+          <NewYear
+            language={language}
+            name={name}
+            url={newYearUrl}
+            onToggleChristmasCard={onToggleChristmasCard}
+          />
         ) : (
-          <>
-            {" "}
-            <Christmas
-              language={language}
-              name={name}
-              url={christmasUrl}
-              onProceedToNewYear={proceedToNewYear}
-            />
-          </>
+          <Christmas
+            language={language}
+            name={name}
+            url={christmasUrl}
+            onProceedToNewYear={proceedToNewYear}
+          />
         )}
       </StyledCard>
     </>
