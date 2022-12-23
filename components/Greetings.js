@@ -14,7 +14,7 @@ export default function Greetings({ language, name, onToggleChristmasCard }) {
   }
 
   const christmasUrl =
-    "https://source.unsplash.com/collection/778914/" + getRandomNumber(223);
+    "https://source.unsplash.com/collection/778914/" + getRandomNumber(874);
   // adjust collection number
 
   const newYearUrl =
