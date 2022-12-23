@@ -12,7 +12,8 @@ const GlobalStyles = createGlobalStyle`
     body {
         font-family: Christmas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         max-width: 800px;
-        height: 100%
+        height: 100%;
+        background-color: black;
     }
     
     * {

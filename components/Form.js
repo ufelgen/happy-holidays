@@ -1,12 +1,9 @@
 import styled from "styled-components";
 import { useState } from "react";
 import LetItSnow from "./Snow";
-// import { useNavigate } from "react";
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
-export default function Form({ onShowChristmasCard }) {
-  const [language, setLanguage] = useState("");
-  const [name, setName] = useState("");
-
+export default function Form({ onToggleChristmasCard, onGetFormData }) {
   //   function navigateToChristmasCard() {
   //     navigate("/christmasCard");
   //   }
@@ -15,9 +12,8 @@ export default function Form({ onShowChristmasCard }) {
     event.preventDefault();
     const language = event.target.elements.language.value;
     const name = event.target.elements.name.value;
-    setLanguage(language);
-    setName(name);
-    onShowChristmasCard();
+    onGetFormData(language, name);
+    onToggleChristmasCard();
 
     event.target.elements.name.focus();
     event.target.reset();
@@ -27,9 +23,11 @@ export default function Form({ onShowChristmasCard }) {
     <>
       <LetItSnow />
       <StyledForm onSubmit={handleSubmitLanguage}>
-        <label htmlFor="language">
-          please select your language <hr></hr>bitte Sprache auswählen
-        </label>
+        <StyledLabel>
+          <label htmlFor="language">
+            please select your language <hr></hr>bitte Sprache auswählen
+          </label>
+        </StyledLabel>
         <select name="language" id="language">
           <option value="german" name="german">
             Deutsch 🇩🇪
@@ -38,11 +36,15 @@ export default function Form({ onShowChristmasCard }) {
             English 🇨🇦
           </option>
         </select>
-        <label htmlFor="name">
-          please type your name <hr></hr>bitte Namen eingeben
-        </label>
+        <StyledLabel>
+          <label htmlFor="name">
+            please type your name <hr></hr>bitte Namen eingeben
+          </label>
+        </StyledLabel>
         <input type="text" name="name" required></input>
-        <button type="submit">go</button>
+        <button type="submit">
+          <BsFillArrowRightCircleFill />
+        </button>
       </StyledForm>
     </>
   );
@@ -58,19 +60,35 @@ const StyledForm = styled.form`
 
   label,
   select,
-  option {
+  option,
+  input {
     margin: 10px;
     font-size: 1.5rem;
     color: black;
     padding: 5px;
+    height: 7vh;
+    border-radius: 3px;
+  }
+
+  input,
+  select,
+  option {
+    background-color: darkgreen;
+    color: red;
   }
 
   button {
     padding: 5px;
-    background-color: black;
+    background-color: transparent;
     color: white;
-    border: 1px solid darkblue;
-    border-radius: 5px;
-    font-size: 2rem;
+
+    border: none;
+    font-size: 3rem;
   }
+`;
+
+const StyledLabel = styled.div`
+  //background-color: rgba(0, 0, 0, 0, 1);
+  background: hsla(221, 100%, 86%, 1);
+  //background-color: white;
 `;
