@@ -1,18 +1,24 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
+
+
+    @font-face {
+        font-family: Christmas;
+        src: url("/fonts/MountainsofChristmas-Regular.ttf");
+    }
+
     html,
     body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-
+        font-family: Christmas, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         max-width: 800px;
-        margin: 0 auto;
         height: 100%
     }
     
     * {
         box-sizing: border-box;
-        padding: 0;        
+        padding: 0;  
+        margin: 0 auto;      
         
     }
 `;
