@@ -50,7 +50,7 @@ const StyledImageContainer = styled.div`
 const StyledWishes = styled.p`
   color: white;
   font-size: 2.5rem;
-  padding: 5vw;
+  padding: 2.5vw;
   text-align: center;
 `;
 
