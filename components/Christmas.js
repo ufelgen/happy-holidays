@@ -6,7 +6,7 @@ export default function Christmas({ language, name, url, onProceedToNewYear }) {
     <>
       {language === "english" ? (
         <>
-          <StyledWishes>Dear {name}</StyledWishes>
+          <StyledWishes>Dear {name},</StyledWishes>
           <StyledImageContainer>
             <Image
               src={url}
@@ -21,7 +21,7 @@ export default function Christmas({ language, name, url, onProceedToNewYear }) {
         </>
       ) : (
         <>
-          <StyledWishes>Liebe/r {name}</StyledWishes>
+          <StyledWishes>Liebe/r {name},</StyledWishes>
           <StyledImageContainer>
             <Image
               src={url}
