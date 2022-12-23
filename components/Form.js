@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { useState } from "react";
 import LetItSnow from "./Snow";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
@@ -24,7 +23,10 @@ export default function Form({ onToggleChristmasCard, onGetFormData }) {
             please select your language <hr></hr>bitte Sprache auswählen
           </label>
         </StyledLabel>
-        <select name="language" id="language">
+        <select name="language" id="language" required>
+          <option value="" hidden={true}>
+            ------
+          </option>
           <option value="german" name="german">
             Deutsch 🇩🇪
           </option>
@@ -49,7 +51,6 @@ export default function Form({ onToggleChristmasCard, onGetFormData }) {
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  margin: 10px;
   justify-content: space-around;
   align-items: center;
   height: 80vh;
@@ -77,7 +78,6 @@ const StyledForm = styled.form`
     padding: 5px;
     background-color: transparent;
     color: white;
-
     border: none;
     font-size: 3rem;
   }
@@ -85,4 +85,5 @@ const StyledForm = styled.form`
 
 const StyledLabel = styled.div`
   background: hsla(221, 100%, 86%, 1);
+  margin: 10px;
 `;

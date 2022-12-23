@@ -1,11 +1,17 @@
 import styled from "styled-components";
 import Site from "../components/Site";
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <StyledMain>
-      <Site />
-    </StyledMain>
+    <>
+      <Head>
+        <title>happy holidays from Ulli</title>
+      </Head>
+      <StyledMain>
+        <Site />
+      </StyledMain>
+    </>
   );
 }
 
